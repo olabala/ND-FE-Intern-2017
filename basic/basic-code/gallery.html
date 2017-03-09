@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/Web_style.css" rel="stylesheet" media="screen and (min-width:980px)">
+    <link href="css/Mobile_style.css" rel="stylesheet" media="screen and (max-width:979px)">
+    <script type="application/javascript">
+	window.onload=function(){
+		//选项卡
+		var oPar=document.getElementById("main_body");
+		var aTab=getByClass(oPar,"tab");
+		
+		var oUl=document.getElementById("table_ul");
+		var aLi=oUl.getElementsByTagName("li");
+		
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].index=i;
+			aLi[i].onclick=function(){
+				for(j=0;j<aLi.length;j++){
+					aLi[j].className="";
+					aTab[j].style.display="none";
+				}
+				this.className="active_li";
+				aTab[this.index].style.display='block';
+			}
+		}
+		
+		//瀑布流中高度
+		var oCol=document.getElementsByClassName("col-panel-content");
+		
+		for(var i=0;i<oCol.length;i++){
+			var oInfo=oCol[i].getElementsByClassName("col-panel-content-info")[0];
+			oCol[i].style.paddingBottom=oInfo.offsetHeight+"px";
+		}
+	}
+</script>
+</head>
+
+<body>
+    <div id="container">
+
+        <!--顶部nav-->
+        <div id="header">
+
+            <div id="logo">
+                <img src="UI/logo.png" width="60" height="50">
+            </div>
+            <div id="hamMenu">
+				<div class="menu-icon menu-icon-out">
+					<i></i>
+					<i></i>
+				</div>
+			</div>
+			
+            <div id="nav">
+                <ul id="nav_ul">
+                    <li>
+                        <a href="javascript:;">首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">文章</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">作品</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">关于</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div id="user">
+                <img src="UI/user.png" width="56" height="56" />
+            </div>
+
+        </div>
+
+        <!--页面主体-->
+        <div id="body">
+            <div id="main_body">
+                <div id="table_index">
+                    <ul id="table_ul">
+                        <li class="active_li">
+                            <i></i>
+                            <a href="javascript:;">ALL</a>
+                        </li>
+
+                        <li>
+                            <i></i>
+                            <a href="javascript:;">javascript Util Functions</a>
+                        </li>
+
+                        <li>
+                            <i></i>
+                            <a href="javascript:;">UI Components</a>
+                        </li>
+
+                        <li>
+                            <i></i>
+                            <a href="javascript:;">Framework</a>
+                        </li>
+
+                        <li>
+                            <i></i>
+                            <a href="javascript:;">Application</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="waterfall" class="clear tab">
+                    <div id="fall_wrapper">
+                    	<div class="col-panel col-panel-2">
+                    		<div class="col-panel-content">
+                    			<img src="UI/2.jpg" />
+                    			<div class="col-panel-content-info bg-purple">
+                    				<div class="info-no">
+                    					<span>J</span>
+                    				</div>
+                    				<div class="info-content">
+                    					<h1>这里是标题</h1>
+                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+                    				</div>
+                    			</div>
+                    		</div>
+                    		<div class="col-panel-3">
+	                    		<div class="col-panel-content">
+	                    			<img src="UI/3.jpg" />
+	                    			<div class="col-panel-content-info bg-yellow">
+	                    				<div class="info-no">
+	                    					<span>A</span>
+	                    				</div>
+	                    				<div class="info-content">
+	                    					<h1>这里是标题</h1>
+	                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+	                    				</div>
+	                    			</div>
+	                    		</div>
+	                    		<div class="col-panel-content">
+	                    			<img src="UI/4.jpg" />
+	                    			<div class="col-panel-content-info bg-red">
+	                    				<div class="info-no">
+	                    					<span>F</span>
+	                    				</div>
+	                    				<div class="info-content">
+	                    					<h1>这里是标题</h1>
+	                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+	                    				</div>
+	                    			</div>
+	                    		</div>
+	                    		<div class="col-panel-content">
+	                    			<img src="UI/3.jpg" />
+	                    			<div class="col-panel-content-info bg-yellow">
+	                    				<div class="info-no">
+	                    					<span>A</span>
+	                    				</div>
+	                    				<div class="info-content">
+	                    					<h1>这里是标题</h1>
+	                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+	                    				</div>
+	                    			</div>
+	                    		</div>
+	                    	</div>
+	                    	<div class="col-panel-3">
+	                    		<div class="col-panel-content">
+	                    			<img src="UI/4.jpg" />
+	                    			<div class="col-panel-content-info bg-yellow">
+	                    				<div class="info-no">
+	                    					<span>A</span>
+	                    				</div>
+	                    				<div class="info-content">
+	                    					<h1>这里是标题</h1>
+	                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+	                    				</div>
+	                    			</div>
+	                    		</div>
+	                    		<div class="col-panel-content">
+	                    			<img src="UI/5.jpg" />
+	                    			<div class="col-panel-content-info bg-red">
+	                    				<div class="info-no">
+	                    					<span>F</span>
+	                    				</div>
+	                    				<div class="info-content">
+	                    					<h1>这里是标题</h1>
+	                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+	                    				</div>
+	                    			</div>
+	                    		</div>
+	                    	</div>
+                    		
+                    	</div>
+                    	<div class="col-panel">
+                    		<div class="col-panel-content">
+                    			<img src="UI/1.jpg" />
+                    			<div class="col-panel-content-info bg-blue">
+                    				<div class="info-no">
+                    					<span>U</span>
+                    				</div>
+                    				<div class="info-content">
+                    					<h1>这里是标题</h1>
+                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+                    				</div>
+                    			</div>
+                    		</div>
+                    		<div class="col-panel-content">
+                    			<img src="UI/4.jpg" />
+                    			<div class="col-panel-content-info bg-purple">
+                    				<div class="info-no">
+                    					<span>J</span>
+                    				</div>
+                    				<div class="info-content">
+                    					<h1>这里是标题</h1>
+                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+                    				</div>
+                    			</div>
+                    		</div>
+                    		<div class="col-panel-content">
+                    			<img src="UI/3.jpg" />
+                    			<div class="col-panel-content-info bg-yellow">
+                    				<div class="info-no">
+                    					<span>A</span>
+                    				</div>
+                    				<div class="info-content">
+                    					<h1>这里是标题</h1>
+                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+                    				</div>
+                    			</div>
+                    		</div>
+                    	</div>
+                    	<div class="col-panel">
+                    		<div class="col-panel-content">
+                    			<img src="UI/3.jpg" />
+                    			<div class="col-panel-content-info bg-yellow">
+                    				<div class="info-no">
+                    					<span>A</span>
+                    				</div>
+                    				<div class="info-content">
+                    					<h1>这里是标题</h1>
+                    					<span>这里是内容啊这里是内容啊这里是内容呀！</span>
+                    				</div>
+                    			</div>
+                    		</div>
+                    		<div class="col-panel-content">
+                    			<img src="UI/6.jpg" />
+                    			<div class="col-panel-content-info bg-red">
+                    				<div class="info-no">
+                    					<span>F</span>
+                    				</div>
+                    				<div class="info-content">
+                    					<h1>这里是标题</h1>
+                    					<span>这里是内容啊这里是内容啊这里是内容呀！这里是内容啊这里是内容啊这里是内容呀！这里是内容啊这里是内容啊这里是内容呀！这里是内容啊这里是内容啊这里是内容呀！这里是内容啊这里是内容啊这里是内容呀！这里是内容啊这里是内容啊这里是内容呀！</span>
+                    				</div>
+                    			</div>
+                    		</div>
+                    	</div>
+                    </div>
+                	
+                </div>
+                <div class="clear tab" style="display: none;">javascript util function</div>
+                
+                <div class="clear tab" style="display: none;">UI components</div>
+                
+                <div class="clear tab" style="display: none;">Framework</div>
+                
+                <div class="clear tab" style="display: none;">Application</div>
+                
+                <div id="more">
+                	<img src="UI/downArrow.png" />
+                	<span>点击查看更多</span>
+                </div>
+            </div>
+            <div id="search" class="fakeSearch">
+                <div id="search_box">
+                    <span class="search_icon">
+                        <img src="UI/Search.png" width="32px" height="32px"/>
+                    </span>
+                    <input type="text" placeholder="Keywords" name="search" class="search">
+                    <a class="search_btn" href="javascript:;">
+                        <span>GO</span>
+                    </a>
+                </div>
+            </div>
+            <div id="ranking">
+            	<h1>人气排行榜</h1>	
+            	<div id="rank_content">
+            		<div class="rank">
+            			<div>
+            				<b>1</b>
+            				<div class="process_bar">
+            					<div class="process"></div>
+            				</div>
+            				<span>ui.tree</span>
+            			</div>
+            		</div>
+            		<div class="rank">
+            			<div>
+            				<b>2</b>
+            				<div class="process_bar">
+            					<div class="process"></div>
+            				</div>
+            				<span>ui.trim</span>
+            			</div>
+            		</div>
+            		<div class="rank">
+            			<div>
+            				<b>3</b>
+            				<div class="process_bar">
+            					<div class="process"></div>
+            				</div>
+            				<span>app.todo</span>
+            			</div>
+            		</div>
+            		<div class="rank">
+            			<div>
+            				<b>4</b>
+            				<div class="process_bar">
+            					<div class="process"></div>
+            				</div>
+            				<span>ui.tab</span>
+            			</div>
+            		</div>
+            		<div class="rank">
+            			<div>
+            				<b>5</b>
+            				<div class="process_bar">
+            					<div class="process"></div>
+            				</div>
+            				<span>ui.addClass</span>
+            			</div>
+            		</div>
+            	</div>
+            	
+            </div>
+        </div>
+        <!--底部版权信息区-->
+        <div id="footer" class="clear">
+            <div id="foot_nav">
+                <ul id="foot_nav_ul">
+                    <li>
+                        <a href="javascript:;">首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">文章</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">作品</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">关于</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div id="link">
+                <ul id="link_ul">
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>学习资料</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>友情链接</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>学习资料</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>友情链接</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>学习资料</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="copyright" class="clear">
+                <p>版权信息</p>
+                <img src="UI/user.png" width="36" height="42" />
+            </div>
+        </div>
+        
+        
+</body>
+<script src="js/util.js" type="application/javascript"></script>
+<script type="text/javascript" src="js/index.js" ></script>
+</html>

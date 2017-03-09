@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+   
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/Web_style.css" rel="stylesheet" media="screen and (min-width:980px)">
+    <link href="css/Mobile_style.css" rel="stylesheet" media="screen and (max-width:979px)">
+    
+    <script type="text/javascript">
+	window.onload=function(){
+		var oProfile=document.getElementById("myProfile");
+		//竖线高度
+		var oText=document.getElementsByClassName("fileText");
+		
+		for(var i=0;i<oText.length;i++){
+			var oI=oText[i].getElementsByTagName("i")[0];
+			oI.style.height=oText[i].offsetHeight+"px";
+		}
+		
+		//时间轴左边
+		var oYears=document.getElementsByClassName("year");
+		for(var i=0;i<oYears.length;i++){
+	//  			oYears[i].style.left=0.5*oProfile.offsetWidth-18+"px";
+		}
+	}
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+        <!--顶部nav-->
+        <div id="header">
+
+            <div id="logo">
+                <img src="UI/logo.png" width="60" height="50">
+            </div>
+            <div id="hamMenu">
+				<div class="menu-icon menu-icon-out">
+					<i></i>
+					<i></i>
+				</div>
+			</div>
+
+            <div id="nav">
+                <ul id="nav_ul">
+                    <li>
+                        <a href="javascript:;">首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">文章</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">作品</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">关于</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div id="user">
+                <img src="UI/user.png" width="56" height="56" />
+            </div>
+
+        </div>
+
+        <!--页面主体-->
+        <div id="body">
+            <div id="myProfile">
+            	<div id="name">
+            		<div class="img">
+            			<img src="UI/mine.png" id="myPhoto"/>	
+            		</div>
+            		<div class="fileText">
+            			<h1>Name</h1>
+	            		<i></i>
+	            		<div class="about">
+	            			<p>这是一段自我介绍，这是一段自我介绍，这真的是一段自我介绍，你知道吗，我真的在自我介绍的呀，真是的自我介绍。一段自我介绍，自我介绍的一段内容，要么在这里，要么在这里，我怎么知道在哪里呀，那你问问别人呀，问我干吗呀，这是自我介绍的，我都跟你说了</p>
+	            		</div>
+            		</div>
+            	</div>
+            	<div id="contact">
+            		<div class="img">
+            			<img src="UI/phone.png" id="myPhone" width="90" height="90"/>
+            		</div>
+            		<div class="fileText">
+            			<h1>联系方式</h1>
+	            		<i></i>
+	            		<div class="about">
+	            			<span><b>QQ：</b> 904788186</span><br />
+		            		<span><b>Tel:</b> 18059054532</span><br />
+		            		<span><b>Email:</b> abc</span><br />
+	            		</div>
+            		</div>
+            	</div>
+            	<div id="school">
+            		<div class="img">
+            			<img src="UI/school.png" id="mySchool" width="90" height="90"/>	
+            		</div>
+            		<div class="fileText">
+            			<h1>教育经历</h1>
+	            		<i></i>
+	            		<div class="about">
+	            			<div class="timeAndTag">
+	            				<div class="year">2010</div>
+	            				<div class="tags">
+	            					<h3>屏南第一中学</h3>
+	            					<p></p>
+	            				</div>
+	            			</div>
+	            			<div class="timeAndTag">
+	            				<div class="year">2013</div>
+	            				<div class="tags">
+	            					<h3>福州大学</h3>
+	            					<h4>
+	            						<span>数计学院</span>
+	            						<span>计算机专业</span>
+	            					</h4>
+	            				</div>
+	            			</div>
+	            			
+	            		</div>
+            		</div>
+            	</div>
+            	<div id="company">
+            		<div class="img">
+            			<img src="UI/company.png" id="myCompany" width="90" height="90"/>
+            		</div>
+            		<div class="fileText">
+            			<h1>实习经历</h1>
+	            		<i></i>
+	            		<div class="about">
+	            			<div class="timeAndTag">
+	            				<div class="year">2016</div>
+	            				<div class="tags">
+	            					<h3>星网锐捷</h3>
+	            					<h4>Web开发工程师</h4>
+	            				</div>
+	            			</div>
+	            			
+	            		</div>
+            		</div>
+            	</div>
+            </div>
+        </div>
+        <!--底部版权信息区-->
+        <div id="footer" class="clear">
+            <div id="foot_nav">
+                <ul id="foot_nav_ul">
+                    <li>
+                        <a href="javascript:;">首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">文章</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">作品</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">关于</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div id="link">
+                <ul id="link_ul">
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>学习资料</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>友情链接</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>学习资料</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>友情链接</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="link_sub_ul">
+                            <li class="link_head">
+                                <span>学习资料</span>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">HOVER时样式</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">LINK</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="copyright" class="clear">
+                <p>版权信息</p>
+                <img src="UI/user.png" width="36" height="42" />
+            </div>
+        </div>
+</body>
+<script src="js/util.js" type="application/javascript">
+</script><script type="text/javascript" src="js/index.js" ></script>
+
+</html>
