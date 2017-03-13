@@ -1,0 +1,74 @@
+body{
+    background: #F5F7F9
+}
+input{
+    outline: none;
+}
+#container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+#container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#container #hobby{
+    padding: 10px 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+#container #time{
+	height: 36px;
+	padding: 4px 12px;
+    font-size: 14px;
+    
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+}
+#btnArea{
+    width: 100%;
+    margin:30px 0;
+    text-align: center;
+}
+#container #btn2{
+    cursor: pointer;
+    padding: 5px 10px;
+	height: 36px;
+    color: #121212;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-left: -1px;
+    box-sizing: border-box;
+    background-color: #E4E4E4;
+    border: 1px solid #bbb;
+}
+#container #btn{
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #121212;
+    border-radius: 4px;
+    margin: 0 auto;
+    font-size: 14px;
+    background-color: #E4E4E4;
+    border: 1px solid #bbb;
+}
+#container p{
+    display: none;
+    color: #f00;
+}
+#container #result{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: left;
+}
+#container  #result-text{
+	margin: 16px auto;
+}
+#container #result-text label{
+	margin-right: 10px;
+}
