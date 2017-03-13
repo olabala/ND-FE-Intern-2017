@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>task0002_3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        	div,ul,li{
+        		margin: 0;
+        		padding: 0;
+        	}
+        	h2{
+        		text-align: center;
+        	}
+        	body{
+        		background: #F5F7F9;
+        	}
+        	#container{
+        		width: 600px;
+        		margin: 0 auto;
+        		position: relative;
+        	}
+        	#container::after{
+        		content: '';
+        		display: block;
+        		clear: both;
+        	}
+			#tags{
+				color:green;
+				text-align: center;
+				margin:30px 10px;
+				font-weight: 600;
+			}
+        	.ul-list{
+        		width: 200px;
+        		height: 500px;
+        		float: left;
+        		background: #FFF;
+        		border: 1px solid #000;
+        		box-sizing: border-box;
+        	}
+        	.ul-list:first-of-type{
+        		margin-right: 200px;
+        	}
+        	.ul-list ul{
+        		list-style: none;
+        	}
+        	.ul-list ul li{
+        		height: 50px;
+        		border-bottom: 1px solid #000;
+        		cursor:move;
+        		box-sizing: border-box;
+        		width: 198px;
+        		background-color: #f00;
+        	}
+        	.ul-list ul .target-li{
+        		border: 2px dashed #000;
+        	}
+        	.ul-list ul .active-li{
+        		border: 1px solid #000;	
+        	}
+        </style>
+	</head>
+	<body>
+		<h2>可将以下两个容器中的任意选项拖动添加到对方容器中</h2>
+		<div id="tags">请点击任意节点进行移动 ! ! !</div>
+		<div id="container">
+			<div id="ul-list-1" class="ul-list">
+				<ul id="ul_1">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					
+				</ul>
+			</div>
+			<div id="ul-list-2" class="ul-list">
+				<ul id="ul_2">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/util.js"></script>
+        <script src="js/task0002_3.js" type="text/javascript"></script>
+        
+	</body>
+</html>
